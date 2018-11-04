@@ -10,15 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181104230833) do
+ActiveRecord::Schema.define(version: 20181104231440) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "games", force: :cascade do |t|
+    t.bigint "hands_played", default: 0
+    t.bigint "win_loss", default: 0
+    t.string "deck_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
     t.bigint "chip_count", default: 10000
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

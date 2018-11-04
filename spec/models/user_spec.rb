@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe User do
+RSpec.describe User, type: :model do
   context 'relationships' do
     it { should have_many(:user_games) }
     it { should have_many(:games), through: :user_parties }

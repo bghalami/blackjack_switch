@@ -4,6 +4,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :username
       t.string :password_digest
       t.bigint :chip_count, default: 10000
+      t.timestamps
     end
   end
 end
