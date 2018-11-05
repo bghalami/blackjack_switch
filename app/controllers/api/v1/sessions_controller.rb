@@ -1,16 +1,12 @@
 class Api::V1::SessionsController < ApiController
   def create
-    if User.find_by_username(user_params[:username])
-      user = User.find_by_username(user_params[:username])
-      if user && user.authenticate(user_params[:password])
-        session[:user_id] = user.id
-        session_saved
-      else
-        session_not_saved
-      end
+    user = User.find_by_username(user_params[:username])
+    if user && user.authenticate(user_params[:password])
+      session[:user_id] = user.id
+      session_saved
     else
       session_not_saved
-    end 
+    end
   end
 
   private
