@@ -16,7 +16,7 @@ class Api::V1::UsersController < ApiController
   end
 
   def user_saved
-    render json: { error: "User Successfully Create.", status: 202 }, status: 202
+    render json: { notice: "User Successfully Create.", status: 202 }, status: 202
   end
 
   def user_not_saved
