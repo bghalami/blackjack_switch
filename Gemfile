@@ -32,6 +32,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 gem 'faraday'
+gem 'faraday_middleware'
 gem 'figaro'
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'awesome_print'
