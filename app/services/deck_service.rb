@@ -5,7 +5,7 @@ class DeckService
   end
 
   private
-  
+
   def conn
     Faraday.new(url: "https://deckofcardsapi.com") do |faraday|
       faraday.use FaradayMiddleware::FollowRedirects
