@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://deckofcardsapi.com/api/deck/new
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: MOVED PERMANENTLY
+    headers:
+      Date:
+      - Sun, 04 Nov 2018 23:37:38 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d426a80390e887ecae684e170f7a1063a1541374658; expires=Mon, 04-Nov-19
+        23:37:38 GMT; path=/; domain=.deckofcardsapi.com; HttpOnly
+      X-Frame-Options:
+      - SAMEORIGIN
+      Location:
+      - https://deckofcardsapi.com/api/deck/new/
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 474ae8dd8fea9b38-DFW
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sun, 04 Nov 2018 23:37:38 GMT
+recorded_with: VCR 4.0.0

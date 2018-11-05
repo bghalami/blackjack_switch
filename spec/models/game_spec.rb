@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Game, type: :model do
   context 'relationships' do
     it { should have_many(:user_games) }
-    it { should have_many(:users), through: :user_parties }
+    it { should have_many(:users) }
   end
   context 'validations' do
      it { should validate_presence_of(:hands_played) }
