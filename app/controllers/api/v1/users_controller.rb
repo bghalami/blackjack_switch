@@ -1,6 +1,7 @@
-class Api::V1::UsersController < ApplicationController
+class Api::V1::UsersController < ApiController
   def create
     user = User.new(user_params)
+    user.assign_api_key
     if user.save
       user_saved
     else
@@ -15,13 +16,10 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def user_saved
-    render json: {
-      error: "User Successfully Create.",
-      status: 202
-      }, status: 202
+    render json: { error: "User Successfully Create.", status: 202 }, status: 202
   end
 
   def user_not_saved
-    render json: { error: "Something went wrong! Try again.", status: 404 }, status: 404
+    render json: { error: "Something went wrong! Make sure you include username and password.", status: 404 }, status: 404
   end
 end

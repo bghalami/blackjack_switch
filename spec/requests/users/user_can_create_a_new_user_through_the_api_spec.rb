@@ -10,4 +10,14 @@ describe "User sends info to api" do
 
     expect(user.username).to eq("ben_10")
   end
+  it "should deny a user create if there's no username" do
+    params = { password: "wiggles"}
+    post "/api/v1/users", params: params
+    expect(response).to_not be_successful
+  end
+  it "should deny a user create if there's no password" do
+    params = { username: "wiggles"}
+    post "/api/v1/users", params: params
+    expect(response).to_not be_successful
+  end
 end
