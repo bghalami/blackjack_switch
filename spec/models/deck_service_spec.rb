@@ -8,7 +8,7 @@ describe "Deck Service" do
       expect(deck[:deck_id]).to be_a(String)
       expect(deck[:remaining]).to be_a(Integer)
       expect(deck[:success]).to eq(true)
-      expect(deck[:shuffled]).to eq(false)
+      expect(deck[:shuffled]).to eq(true)
     end
   end
 end
