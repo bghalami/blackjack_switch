@@ -5,7 +5,8 @@ class User < ApplicationRecord
   has_many :games, through: :user_games
 
   validates :username, uniqueness: true, presence: true
-  validates_presence_of :password, :chip_count, :api_key
+  validates_presence_of :password, on: :create
+  validates_presence_of :api_key, :chip_count
 
   has_secure_password
 
