@@ -9,6 +9,10 @@ class Api::V1::HandsController < ApiController
     render json: @game.current_hand
   end
 
+  def show
+    render json: @game.current_hand
+  end
+
   private
 
   def validate_user
