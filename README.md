@@ -23,11 +23,11 @@ Things you may want to cover:
 * Deployment instructions
 
 * ENDPOINTS!!!
-POST /api/v1/users - Create a user
-GET  /api/v1/users/:id - Get user info
-POST /api/v1/games/:game_id/deal - deal a new game for the user by api-key
-GET  /api/v1/games/:game_id/current_hand - seeing current hand of game
-POST /api/v1/games/:game_id/current_hand/moves - post a move to the current hand
-POST /api/v1/games - create a new game
-GET  /api/v1/games/:id - see a game by id
-POST /api/v1/login - login with username and password
+* POST /api/v1/users - Create a user
+* GET  /api/v1/users/:id - Get user info
+* POST /api/v1/games/:game_id/deal - deal a new game for the user by api-key
+* GET  /api/v1/games/:game_id/current_hand - seeing current hand of game
+* POST /api/v1/games/:game_id/current_hand/moves - post a move to the current hand
+* POST /api/v1/games - create a new game
+* GET  /api/v1/games/:id - see a game by id
+* POST /api/v1/login - login with username and password
