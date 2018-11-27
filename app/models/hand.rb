@@ -12,7 +12,9 @@ class Hand
     @game_id     = game.id
     @bet         = bet.to_i
     @hand_one    = []
+    @one_stay    = false
     @hand_two    = []
+    @two_stay    = false
     @dealer_hand = []
     @swapped     = false
     shuffle_up_and_deal
@@ -23,6 +25,13 @@ class Hand
     @swapped = true
   end
 
+  def hit
+    if @one_stay == false
+      @hand_one << draw_a_card[:cards].first
+    elsif @one_stay == true && @two_stay == false
+      @hand_two << draw_a_card[:cards].first
+    end
+  end
   private
 
   def shuffle_up_and_deal
