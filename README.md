@@ -24,7 +24,7 @@ Things you may want to cover:
 
 * ENDPOINTS!!!
 * POST /api/v1/users - Create a user
-* need username and password
+  need username and password
 
 * GET  /api/v1/users/:id - Get user info
 
