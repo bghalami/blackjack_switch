@@ -10,8 +10,8 @@ class HandSerializer < ActiveModel::Serializer
     get_game.users.map do |user|
       { username:   user.username,
         chip_count: user.chip_count,
-        hand_one:   [object.hand_one[0][:code], object.hand_one[1][:code]],
-        hand_two:   [object.hand_two[0][:code], object.hand_two[1][:code]],
+        hand_one:   object.hand_one.map { |card| card[:code] },
+        hand_two:   object.hand_two.map { |card| card[:code] },
         bet:        object.bet
       }
     end
