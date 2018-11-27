@@ -38,7 +38,15 @@ class Api::V1::MovesController < ApiController
         render json: @game, notice: "Cards have already been switched"
       end
     elsif params[:move].upcase == "HIT"
+      @game.current_hand.hit
+      @game.current_hand.check_hands
+      @game.save
+      render json: @game.current_hand
     elsif params[:move].upcase == "STAY"
+      @game.current_hand.stay
+      @game.current_hand.check_hands
+      @game.save
+      render json: @game.current_hand
     else
       render json: { error: "Please make a valid move."}
     end
