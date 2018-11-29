@@ -38,6 +38,7 @@ gem 'active_model_serializers', '~> 0.10.0'
 gem 'awesome_print'
 gem 'omniauth-google-oauth2'
 gem 'newrelic_rpm'
+gem 'rack-cors', require: 'rack/cors'
 
 
 group :development, :test do
