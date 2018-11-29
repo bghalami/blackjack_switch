@@ -27,5 +27,10 @@ module BlackjackSwitch
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.action_dispatch.default_headers = {
+      'Access-Control-Allow-Origin' => 'https://bens-blackjack-switch.herokuapp.com/',
+      'Access-Control-Request-Method' => %w{GET POST OPTIONS}.join(",")
+    }
   end
 end
