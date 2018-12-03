@@ -5,8 +5,8 @@
 
 * Database - PostgreSQL
 
-* External API's
-  [I consume the deck of cards API for this project](https://deckofcardsapi.com/) . 
+* External API's  
+  [I consume the deck of cards API for this project](https://deckofcardsapi.com/) .  
 
 ### Let's run some tests
  If you want to run my tests, it's as simple as downloading the correct Ruby and Rails versions.  
