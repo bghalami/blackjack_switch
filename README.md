@@ -1,5 +1,5 @@
 # BlackJack Switch
-
+[![Maintainability](https://api.codeclimate.com/v1/badges/ce26a90de66447d326d9/maintainability)](https://codeclimate.com/github/bghalami/blackjack_switch/maintainability)
 * Ruby version - 2.4.1
 * Rails version - 5.1.6
 
