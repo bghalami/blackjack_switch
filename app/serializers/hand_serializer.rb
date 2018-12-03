@@ -1,6 +1,6 @@
 class HandSerializer < ActiveModel::Serializer
   alias :read_attribute_for_serialization :send
-  attributes :game_id, :players, :dealer_hand, :winner
+  attributes :game_id, :players, :dealer_hand, :one_stay, :two_stay, :winner
 
   def game_id
     object.game_id
@@ -27,5 +27,13 @@ class HandSerializer < ActiveModel::Serializer
 
   def winner
     object.winner
+  end
+
+  def one_stay
+    object.one_stay
+  end
+
+  def two_stay
+    object.two_stay
   end
 end

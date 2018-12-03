@@ -7,7 +7,9 @@ class Hand
               :dealer_hand,
               :swapped,
               :winner,
-              :message
+              :message,
+              :one_stay,
+              :two_stay
 
   def initialize(user, game, bet)
     @user        = user
