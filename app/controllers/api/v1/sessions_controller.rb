@@ -3,7 +3,7 @@ class Api::V1::SessionsController < ApiController
     user = User.find_by_username(user_params[:username])
     if user && user.authenticate(user_params[:password])
       session[:user_id] = user.id
-      session_saved
+      session_saved(user)
     else
       session_not_saved
     end
@@ -15,8 +15,8 @@ class Api::V1::SessionsController < ApiController
     params.permit(:username, :password)
   end
 
-  def session_saved
-    render json: { notice: "User Successfully Logged In.", status: 202 }, status: 202
+  def session_saved(user)
+    render json: { notice: "User Successfully Logged In.", status: 202, api_key: user.api_key }, status: 202
   end
 
   def session_not_saved

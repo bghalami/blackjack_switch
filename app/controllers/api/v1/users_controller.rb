@@ -3,7 +3,7 @@ class Api::V1::UsersController < ApiController
     user = User.new(user_params)
     user.assign_api_key
     if user.save
-      user_saved
+      user_saved(user)
     else
       user_not_saved
     end
@@ -20,8 +20,8 @@ class Api::V1::UsersController < ApiController
     params.permit(:username, :password)
   end
 
-  def user_saved
-    render json: { notice: "User Successfully Create.", status: 202 }, status: 202
+  def user_saved(user)
+    render json: { notice: "User Successfully Create.", status: 202, api_key: user.api_key }, status: 202
   end
 
   def user_not_saved
