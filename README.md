@@ -11,7 +11,13 @@
 * Tech Stack  
   Ruby  
   Ruby on Rails  
-  
+  RSpec    
+  Faraday  
+  Capybara  
+  Active Model Serializers  
+  Database Cleaner  
+  VCR  
+  SimpleCov  
 
 ### Let's run some tests
  If you want to run my tests, it's as simple as downloading the correct Ruby and Rails versions.  
