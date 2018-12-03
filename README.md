@@ -1,14 +1,12 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+# BlackJack Switch
 
 * Ruby version - 2.4.1
 * Rails version - 5.1.6
 
 * Database - PostgreSQL
+
+* External API's
+  ![I consume the deck of cards API for this project](https://deckofcardsapi.com/) . 
 
 ### Let's run some tests
  If you want to run my tests, it's as simple as downloading the correct Ruby and Rails versions.  
