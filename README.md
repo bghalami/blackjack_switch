@@ -22,7 +22,7 @@ Things you may want to cover:
 ## ENDPOINTS!!!
 #### API-KEY
   To obtain an API-KEY you simply need to create an account. Your key will be sent back in a JSON response.  
-  
+  ---
 * POST /api/v1/users - Create a user
   need 'username' and 'password'.  
 
