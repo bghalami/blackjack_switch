@@ -79,7 +79,7 @@ class Hand
 
   def dealer_draw
     if hand_one_sum <= 21
-      while dealer_sum < hand_one_sum
+      while dealer_sum < (hand_one_sum + 1)
         @dealer_hand << draw_a_card[:cards].first
         if dealer_sum > 21
           return
@@ -87,7 +87,7 @@ class Hand
       end
     end
     if hand_two_sum <= 21
-      while dealer_sum < hand_two_sum
+      while dealer_sum < (hand_two_sum + 1)
         @dealer_hand << draw_a_card[:cards].first
         if dealer_sum > 21
           return
