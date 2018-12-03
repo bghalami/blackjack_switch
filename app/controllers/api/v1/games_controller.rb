@@ -2,8 +2,8 @@ class Api::V1::GamesController < ApiController
   before_action :validate_user
 
   def create
-    user = valid_user?
-    game = user.games.new
+    @user = valid_user?
+    game = @user.games.new
     game.get_deck_id(6)
     if game.save
       new_game_save(game)
@@ -33,8 +33,7 @@ class Api::V1::GamesController < ApiController
   end
 
   def new_game_save(new_game)
-    user = User.find_by_id(params[:user_id])
-    user.games << new_game
+    @user.games << new_game
     render json: new_game
   end
 end
